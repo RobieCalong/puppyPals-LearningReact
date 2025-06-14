@@ -18,7 +18,7 @@ function App() {
 
   return (
     <div>
-      <h1>this is a test</h1>
+      <h1 style={{ color: "green" }}>List of Puppies: </h1>
       {featPupId && (
         <div>
           <h2>{featuredPup.name}</h2>
@@ -30,7 +30,11 @@ function App() {
       )}
       {puppies.map((puppy) => {
         return (
-          <p onClick={() => handleClick(puppy.id)} key={puppy.id}>
+          <p
+            className="puppyParagraph"
+            onClick={() => handleClick(puppy.id)}
+            key={puppy.id}
+          >
             {puppy.name}
           </p>
         );
